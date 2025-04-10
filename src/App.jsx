@@ -18,14 +18,13 @@ const App = () => {
       <Navbar />
       
       <div className="max-w-screen-xl mx-auto">
-      <Banner />
-      <Skills />
-        
+        <Banner />
+        <Skills />
         <Experience />
         <Projects />
-        <Resume />
         <Contact />
       </div>
+      <Resume />
       
       <div id="about" className={`w-full ${theme === 'dark' ? 'bg-bodyColor-dark/90 text-fontColor-dark/90' : 'bg-bodyColor-light/90 text-fontColor-light/90'}`}>
         <Footer />
