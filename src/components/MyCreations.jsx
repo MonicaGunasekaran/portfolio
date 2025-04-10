@@ -16,17 +16,17 @@ export default function MyCreations() {
   ];
 
   return (
-    <section id="projects" className="py-16 bg-[#F8F0FC]">
-      <h2 className="text-4xl font-bold text-[#6A2C91] text-center mb-10">🎨 My Creations 💻</h2>
+    <section id="projects" className="py-16 bg-background-light/50 dark:bg-background-dark/50">
+      <h2 className="text-4xl font-bold text-primary-light dark:text-primary-dark text-center mb-10">🎨 My Creations 💻</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
-            <div className="w-16 h-16 bg-gray-200 rounded-full flex justify-center items-center mb-4">
+          <div key={index} className="bg-background-light dark:bg-background-dark rounded-2xl shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+            <div className="w-16 h-16 bg-background-light/80 dark:bg-background-dark/80 rounded-full flex justify-center items-center mb-4">
               <img src={project.logo} alt={project.name} className="w-10 h-10" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">{project.name}</h3>
-            <p className="text-gray-600 mt-2">{project.description}</p>
+            <h3 className="text-xl font-semibold text-text-light dark:text-text-dark">{project.name}</h3>
+            <p className="text-text-light/80 dark:text-text-dark/80 mt-2">{project.description}</p>
           </div>
         ))}
       </div>

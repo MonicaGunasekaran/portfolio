@@ -13,14 +13,14 @@ export default function Header() {
   }, [darkMode]);
 
   return (
-    <header className="flex justify-between items-center bg-primary text-white py-5 px-8 shadow-md rounded-full flex-wrap w-full max-w-full">
+    <header className="flex justify-between items-center bg-primary-light dark:bg-primary-dark text-text-dark dark:text-text-light py-5 px-8 shadow-md rounded-full flex-wrap w-full max-w-full">
       <button 
         onClick={() => setDarkMode(!darkMode)}
         className="text-2xl"
       >
         {darkMode ? '☀️' : '🌙'}
       </button>
-      <div className="font-['Italiana'] text-3xl font-bold text-white uppercase tracking-wide cursor-pointer whitespace-nowrap hover:text-[#6A2C91] transition-colors duration-300">
+      <div className="font-['Italiana'] text-3xl font-bold text-text-dark dark:text-text-light uppercase tracking-wide cursor-pointer whitespace-nowrap hover:text-primary-dark dark:hover:text-primary-light transition-colors duration-300">
         Monica's Portfolio
       </div>
       <nav>
@@ -30,7 +30,7 @@ export default function Header() {
               to="me" 
               smooth={true} 
               duration={500} 
-              className="text-white no-underline hover:text-[#6A2C91] transition-colors duration-300 cursor-pointer"
+              className="text-text-dark dark:text-text-light no-underline hover:text-primary-dark dark:hover:text-primary-light transition-colors duration-300 cursor-pointer"
             >
               Me
             </Link>
@@ -41,7 +41,7 @@ export default function Header() {
               smooth={true} 
               duration={500} 
               offset={-140} 
-              className="text-white no-underline hover:text-[#6A2C91] transition-colors duration-300 cursor-pointer"
+              className="text-text-dark dark:text-text-light no-underline hover:text-primary-dark dark:hover:text-primary-light transition-colors duration-300 cursor-pointer"
             >
               About
             </Link>
@@ -52,7 +52,7 @@ export default function Header() {
               smooth={true} 
               duration={500} 
               offset={-100} 
-              className="text-white no-underline hover:text-[#6A2C91] transition-colors duration-300 cursor-pointer"
+              className="text-text-dark dark:text-text-light no-underline hover:text-primary-dark dark:hover:text-primary-light transition-colors duration-300 cursor-pointer"
             >
               Projects
             </Link>
@@ -63,7 +63,7 @@ export default function Header() {
               smooth={true} 
               duration={500} 
               offset={-40} 
-              className="text-white no-underline hover:text-[#6A2C91] transition-colors duration-300 cursor-pointer"
+              className="text-text-dark dark:text-text-light no-underline hover:text-primary-dark dark:hover:text-primary-light transition-colors duration-300 cursor-pointer"
             >
               Experience
             </Link>
@@ -74,7 +74,7 @@ export default function Header() {
               smooth={true} 
               duration={500} 
               offset={-40} 
-              className="text-white no-underline hover:text-[#6A2C91] transition-colors duration-300 cursor-pointer"
+              className="text-text-dark dark:text-text-light no-underline hover:text-primary-dark dark:hover:text-primary-light transition-colors duration-300 cursor-pointer"
             >
               Contact
             </Link>

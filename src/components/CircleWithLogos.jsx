@@ -14,9 +14,9 @@ const DigitalToolbox = () => {
     <div className="flex items-center justify-start min-h-screen w-full px-10 gap-[200px]">
       {/* Circle with Rotating Effect */}
       <div className="relative w-[650px] h-[650px] flex justify-center items-center 
-                bg-[#C3A4E5] rounded-full shadow-lg 
-                transition-transform transition-colors duration-700 ease-in-out 
-                hover:rotate-[360deg] hover:bg-[#E6E6FA]">
+                bg-primary-light rounded-full shadow-lg 
+                transition-colors duration-700 ease-in-out 
+                hover:rotate-[360deg] hover:bg-primary-light/90">
 
         {/* Logos positioned in a circular layout */}
         {logos.map((logo, index) => (
@@ -38,14 +38,14 @@ const DigitalToolbox = () => {
 
       {/* Right Side Content */}
       <div className="flex-grow min-w-[300px] min-h-[250px] -mt-[650px]">
-        <h2 className="text-4xl font-light text-[#721172] mt-[300px] ml-5">My Digital Toolbox</h2>
+        <h2 className="text-4xl font-light text-primary-light dark:text-primary-dark mt-[300px] ml-5">My Digital Toolbox</h2>
         <ul className="mt-5 pl-10 list-disc space-y-3">
-          <li className="text-xl font-light text-gray-700 ml-24">Java</li>
-          <li className="text-xl font-light text-gray-700 ml-24">SQL</li>
-          <li className="text-xl font-light text-gray-700 ml-24">Python</li>
-          <li className="text-xl font-light text-gray-700 ml-24">JavaScript</li>
-          <li className="text-xl font-light text-gray-700 ml-24">React</li>
-          <li className="text-xl font-light text-gray-700 ml-24">Git</li>
+          <li className="text-xl font-light text-text-light dark:text-text-dark ml-24">Java</li>
+          <li className="text-xl font-light text-text-light dark:text-text-dark ml-24">SQL</li>
+          <li className="text-xl font-light text-text-light dark:text-text-dark ml-24">Python</li>
+          <li className="text-xl font-light text-text-light dark:text-text-dark ml-24">JavaScript</li>
+          <li className="text-xl font-light text-text-light dark:text-text-dark ml-24">React</li>
+          <li className="text-xl font-light text-text-light dark:text-text-dark ml-24">Git</li>
         </ul>
 
       </div>
