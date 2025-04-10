@@ -34,10 +34,10 @@ const Navbar = () => {
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
           {navLinksData.map(({ _id, title, link }) => (
             <li
-              className={` transition-all duration-300 ${
-                scrolled ? `text-base ${
+              className={`text-base transition-all duration-300 ${
+                scrolled ? ` ${
                 theme === 'dark' ? 'text-fontColor-dark/60' : 'text-fontColor-light/60'
-              } ` : `text-lg font-bold  ${
+              } ` : ` font-bold  ${
                 theme === 'dark' ? 'text-fontColor-dark/50' : 'text-fontColor-light/50'
               }`
               }  tracking-wide hover:text-designColor dark:hover:text-designColor-dark duration-300 group cursor-pointer relative`}

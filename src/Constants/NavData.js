@@ -6,13 +6,13 @@ export const navLinksData = [
     },
     {
         _id: 1002,
-        title: "Experience",
-        link: "#experience",
+        title: "Skills/Education",
+        link: "#skills",
     },
     {
         _id: 1003,
-        title: "Education",
-        link: "#education",
+        title: "Experience",
+        link: "#experience",
     },
     {
         _id: 1004,
@@ -21,12 +21,18 @@ export const navLinksData = [
     },
     {
         _id: 1005,
+        title: "Contact",
+        link: "#contact",
+    },
+    {
+        _id: 1006,
         title: "Resume",
         link: "#resume",
     },
     {
-        _id: 1006,
+        _id: 1007,
         title: "About",
         link: "#about",
     },
+    
 ];
