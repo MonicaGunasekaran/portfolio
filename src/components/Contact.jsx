@@ -15,21 +15,21 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 bg-gray-100">
-      <h2 className="text-4xl font-bold text-center text-[#6A2C91] mb-10">📬 Contact Me</h2>
+    <section id="contact" className="py-16 bg-background">
+      <h2 className="text-4xl font-bold text-center text-primary mb-10">📬 Contact Me</h2>
 
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
         {contactInfo.map((contact, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-md w-full max-w-md transition-transform duration-300 hover:scale-105"
+            className="flex items-center gap-4 bg-background/50 p-4 rounded-lg shadow-md w-full max-w-md transition-transform duration-300 hover:scale-105 border border-primary/20"
           >
             <img src={contact.icon} alt="Contact Icon" className="w-8 h-8" />
             <a
               href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-medium text-gray-700 hover:text-[#6A2C91] transition-colors duration-300"
+              className="text-lg font-medium text-text hover:text-primary transition-colors duration-300"
             >
               {contact.text}
             </a>

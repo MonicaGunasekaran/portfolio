@@ -1,7 +1,7 @@
 
-import Header from "../src/components/Header";
-import MainContent from "../src/components/MainContent"; // Fixed path
-// import MyCreations from "../src/components/MyCreations"; // Fixed path
+import { useEffect } from 'react';
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
 import CircleWithLogos from "../src/components/CircleWithLogos";
 import MyCreations from "./components/MyCreations";
 import Experience from "./components/Experience";
