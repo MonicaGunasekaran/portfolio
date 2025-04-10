@@ -4,23 +4,23 @@ import { Link } from 'react-scroll';
 
 export default function MainContent() {
   return (
-    <section id="me" className="flex flex-col lg:flex-row items-center justify-between gap-10 px-8 py-16 bg-background-light dark:bg-background-dark">
+    <section id="me" className="flex flex-col lg:flex-row items-center justify-between gap-10 px-8 py-16 bg-bodyColor-light dark:bg-bodyColor-dark">
       
       {/* Left Section - Text */}
       <div className="lg:w-1/2 text-center lg:text-left space-y-4">
-        <h1 className="text-4xl font-bold text-primary-light dark:text-primary-dark">A Little bit About Me 🌸</h1>
-        <p className="text-2xl font-semibold text-text-light dark:text-text-dark">Hi, I'm Monica 👋</p>
-        <p className="text-xl text-text-light/80 dark:text-text-dark/80">Final Year CSE Student | Aspiring Software Developer</p>
-        <p className="text-lg text-text-light/90 dark:text-text-dark/90 leading-relaxed">
+        <h1 className="text-4xl font-bold text-designColor-light dark:text-designColor-dark">A Little bit About Me 🌸</h1>
+        <p className="text-2xl font-semibold text-fontColor-light dark:text-fontColor-dark">Hi, I'm Monica 👋</p>
+        <p className="text-xl text-fontColor-light/80 dark:text-fontColor-dark/80">Final Year CSE Student | Aspiring Software Developer</p>
+        <p className="text-lg text-fontColor-light/90 dark:text-fontColor-dark/90 leading-relaxed">
           My passion lies in building software solutions that make a difference. Over the past few years, I've developed 
-          proficiency in <span className="font-semibold text-primary-light dark:text-primary-dark">Java, React,</span> and <span className="font-semibold text-primary-light dark:text-primary-dark">UI/UX design.</span> 
+          proficiency in <span className="font-semibold text-designColor-light dark:text-designColor-dark">Java, React,</span> and <span className="font-semibold text-designColor-light dark:text-designColor-dark">UI/UX design.</span> 
           <br /><br />
           I have worked on projects that have honed my skills in these areas. Beyond academics, I enjoy writing 
-          <span className="font-semibold text-primary-light dark:text-primary-dark"> Technical</span> and <span className="font-semibold text-primary-light dark:text-primary-dark">Casual Content.</span> 
+          <span className="font-semibold text-designColor-light dark:text-designColor-dark"> Technical</span> and <span className="font-semibold text-designColor-light dark:text-designColor-dark">Casual Content.</span> 
           I believe in continuous learning and am always eager to embrace new challenges.
         </p>
         <Link to="contact" smooth={true} duration={500} offset={-50}>
-          <button className="bg-primary-light dark:bg-primary-dark text-text-dark dark:text-text-light px-6 py-3 text-lg font-semibold rounded-full shadow-lg hover:bg-primary-light/80 dark:hover:bg-primary-dark/80 transition duration-300">
+          <button className="bg-designColor-light dark:bg-designColor-dark text-fontColor-dark dark:text-fontColor-light px-6 py-3 text-lg font-semibold rounded-full shadow-lg hover:bg-designColor-light/80 dark:hover:bg-designColor-dark/80 transition duration-300">
             Contact Me
           </button>
         </Link>

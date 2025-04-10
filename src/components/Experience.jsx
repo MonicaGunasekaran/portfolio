@@ -26,14 +26,14 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="py-10 px-8 bg-background-light dark:bg-background-dark">
-      <h2 className="text-4xl font-bold text-primary-light dark:text-primary-dark text-center mb-10">🚀Experience That Shapes Me ✨</h2>
+    <div className="py-10 px-8 bg-bodyColor-light dark:bg-bodyColor-dark">
+      <h2 className="text-4xl font-bold text-designColor-light dark:text-designColor-dark text-center mb-10">🚀Experience That Shapes Me ✨</h2>
 
       <div className="flex flex-col gap-12">
         {experiences.map((exp, index) => (
           <div key={index} className={`flex items-center gap-16 ${exp.reverse ? "flex-row-reverse" : ""}`}>
             {/* Diamond Logo */}
-            <div className="w-48 h-48 bg-primary-light/50 dark:bg-primary-dark/50 flex justify-center items-center rounded-xl transform rotate-45 shadow-lg">
+            <div className="w-48 h-48 bg-designColor-light/50 dark:bg-designColor-dark/50 flex justify-center items-center rounded-xl transform rotate-45 shadow-lg">
               <img
                 src={exp.logo}
                 alt={`${exp.company} Logo`}
@@ -42,10 +42,10 @@ export default function Experience() {
             </div>
 
             {/* Experience Info */}
-            <div className="w-[900px] bg-background-light/80 dark:bg-background-dark/80 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold italic text-primary-light dark:text-primary-dark">{exp.company}</h3>
-              <p className="text-lg italic text-text-light/70 dark:text-text-dark/70">{exp.period}</p>
-              <ul className="mt-3 list-disc list-inside text-text-light dark:text-text-dark">
+            <div className="w-[900px] bg-bodyColor-light/80 dark:bg-bodyColor-dark/80 p-6 rounded-xl shadow-md">
+              <h3 className="text-xl font-bold italic text-designColor-light dark:text-designColor-dark">{exp.company}</h3>
+              <p className="text-lg italic text-fontColor-light/70 dark:text-fontColor-dark/70">{exp.period}</p>
+              <ul className="mt-3 list-disc list-inside text-fontColor-light dark:text-fontColor-dark">
                 {exp.description.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}

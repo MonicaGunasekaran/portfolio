@@ -15,21 +15,21 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 bg-background-light dark:bg-background-dark">
-      <h2 className="text-4xl font-bold text-center text-primary-light dark:text-primary-dark mb-10">📬 Contact Me</h2>
+    <section id="contact" className="py-16 bg-bodyColor-light dark:bg-bodyColor-dark">
+      <h2 className="text-4xl font-bold text-center text-designColor-light dark:text-designColor-dark mb-10">📬 Contact Me</h2>
 
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
         {contactInfo.map((contact, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 bg-background-light/50 dark:bg-background-dark/50 p-4 rounded-lg shadow-md w-full max-w-md transition-transform duration-300 hover:scale-105 border border-primary-light/20 dark:border-primary-dark/20"
+            className="flex items-center gap-4 bg-bodyColor-light/50 dark:bg-bodyColor-dark/50 p-4 rounded-lg shadow-md w-full max-w-md transition-transform duration-300 hover:scale-105 border border-designColor-light/20 dark:border-designColor-dark/20"
           >
             <img src={contact.icon} alt="Contact Icon" className="w-8 h-8" />
             <a
               href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-medium text-text-light dark:text-text-dark hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+              className="text-lg font-medium text-fontColor-light dark:text-fontColor-dark hover:text-designColor-light dark:hover:text-designColor-dark transition-colors duration-300"
             >
               {contact.text}
             </a>

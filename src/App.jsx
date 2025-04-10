@@ -1,25 +1,23 @@
-
 import { useEffect } from 'react';
-import Header from "./components/Header";
+import { ThemeProvider } from './context/themeContext.jsx';
+import Navbar from "./components/Header";
 import MainContent from "./components/MainContent";
 import CircleWithLogos from "../src/components/CircleWithLogos";
 import MyCreations from "./components/MyCreations";
 import Experience from "./components/Experience";
 import Contact from "../src/components/Contact";
-// import Experience from "../src/components/Experience";
+
 export default function App() {
   return (
     <>
-      <Header />
+      <ThemeProvider>
+        <Navbar />
+      </ThemeProvider>
       <MainContent />
       <CircleWithLogos />
       <MyCreations/>
       <Experience/>
       <Contact/>
-      {/* 
-      
-      
-      <Contact /> */}
     </>
   );
 }
