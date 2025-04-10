@@ -1,23 +1,38 @@
-import { useEffect } from 'react';
-import { ThemeProvider } from './context/themeContext.jsx';
-import Navbar from "./components/Header";
-import MainContent from "./components/MainContent";
-import CircleWithLogos from "../src/components/CircleWithLogos";
-import MyCreations from "./components/MyCreations";
-import Experience from "./components/Experience";
-import Contact from "../src/components/Contact";
+import { useContext } from 'react';
+import { ThemeContext } from './context/themeContext';
+import Banner from "./Components/Banner/Banner";
+import Skills from "./Components/Skills/Skills";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer";
+import FooterBottom from "./Components/FooterBottom";
+import Navbar from "./Components/Navbar";
+import Projects from "./Components/Projects";
+import Resume from "./Components/Resume";
+import Experience from './Components/Experience';
 
-export default function App() {
+const App = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <>
-      <ThemeProvider>
-        <Navbar />
-      </ThemeProvider>
-      <MainContent />
-      <CircleWithLogos />
-      <MyCreations/>
-      <Experience/>
-      <Contact/>
-    </>
-  );
+    <div className={`w-full h-auto ${theme === 'dark' ? 'bg-bodyColor-dark text-fontColor-dark' : 'bg-bodyColor-light text-fontColor-light'}`}>
+      <Navbar />
+      
+      <div className="max-w-screen-xl mx-auto">
+      <Banner />
+      <Skills />
+        
+        <Experience />
+        <Projects />
+        <Resume />
+        <Contact />
+      </div>
+      
+      <div id="about" className={`w-full ${theme === 'dark' ? 'bg-bodyColor-dark/90 text-fontColor-dark/90' : 'bg-bodyColor-light/90 text-fontColor-light/90'}`}>
+        <Footer />
+        <FooterBottom />
+      </div>
+    </div>
+  )
 }
+
+export default App;

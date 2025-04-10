@@ -1,4 +1,7 @@
-import React from "react";
+import { useContext } from 'react';
+import { ThemeContext } from '../context/themeContext';
+import Title from "./Title";
+
 const experiences = [
   {
     company: "ApproLabs",
@@ -9,7 +12,6 @@ const experiences = [
       "Collaborated with teams to align marketing strategies with business goals."
     ],
     logo: "/assets/approlabs.png",
-    reverse: false,
   },
   {
     company: "Atulah Power Solutions",
@@ -20,32 +22,40 @@ const experiences = [
       "Supported operational workflows by aligning technical and creative tasks effectively."
     ],
     logo: "/assets/atulah.png",
-    reverse: true,
   }
 ];
 
-export default function Experience() {
-  return (
-    <div className="py-10 px-8 bg-bodyColor-light dark:bg-bodyColor-dark">
-      <h2 className="text-4xl font-bold text-designColor-light dark:text-designColor-dark text-center mb-10">🚀Experience That Shapes Me ✨</h2>
+const Experience = () => {
+  const { theme } = useContext(ThemeContext);
 
-      <div className="flex flex-col gap-12">
+  return (
+    <section
+      id="experience"
+      className={`w-full py-20 border-b-[1px] ${
+        theme === 'dark' 
+          ? 'border-b-bodyColor-dark/50' 
+          : 'border-b-bodyColor-light/50'
+      } scroll-mt-[100px]`}
+    >
+      <Title title="Professional Experience" des="Work History" />
+      
+      <div className="flex flex-col gap-12 mt-10">
         {experiences.map((exp, index) => (
-          <div key={index} className={`flex items-center gap-16 ${exp.reverse ? "flex-row-reverse" : ""}`}>
-            {/* Diamond Logo */}
-            <div className="w-48 h-48 bg-designColor-light/50 dark:bg-designColor-dark/50 flex justify-center items-center rounded-xl transform rotate-45 shadow-lg">
+          <div key={index} className={`flex flex-col md:flex-row items-center gap-8`}>
+            {/* Company Logo */}
+            <div className="w-32 h-32 bg-fontColor-dark/50 dark:bg-fontColor-dark/90 flex justify-center items-center rounded-3xl shadow-2xl">
               <img
                 src={exp.logo}
                 alt={`${exp.company} Logo`}
-                className="w-36 h-36 object-contain transform -rotate-45"
+                className="w-24 h-24 object-contain"
               />
             </div>
 
             {/* Experience Info */}
-            <div className="w-[900px] bg-bodyColor-light/80 dark:bg-bodyColor-dark/80 p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold italic text-designColor-light dark:text-designColor-dark">{exp.company}</h3>
-              <p className="text-lg italic text-fontColor-light/70 dark:text-fontColor-dark/70">{exp.period}</p>
-              <ul className="mt-3 list-disc list-inside text-fontColor-light dark:text-fontColor-dark">
+            <div className="flex-1 bg-fontColor-dark/20 dark:bg-fontColor-dark/20 p-6 rounded-xl shadow-2xl">
+              <h3 className="text-xl font-bold text-designColor-light dark:text-designColor-dark">{exp.company}</h3>
+              <p className="text-lg text-fontColor-light/70 dark:text-fontColor-dark/70 mb-3">{exp.period}</p>
+              <ul className="list-disc list-inside text-fontColor-light dark:text-fontColor-dark space-y-2">
                 {exp.description.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
@@ -54,6 +64,8 @@ export default function Experience() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
+
+export default Experience;

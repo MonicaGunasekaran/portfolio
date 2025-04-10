@@ -14,16 +14,18 @@ export default {
       colors: {
         designColor: {
           DEFAULT: '#3b82f6', // default (blue-500)
-          dark: '#C3A4E5',  // violet
-          light: '#721172', // dark violet
+          dark: '#facc15', // yellow-400
+          dark2: '#ECE896', // lightyello
+          light2: '#568BD0', //lightblue
+          light: '#3b82f6', // blue-500
         },
         fontColor: {
           dark: '#ffffff',
           light: '#000000',
         },
         bodyColor: {
-          dark: '#212428',
-          light: '#f3f4f6', // bg-gray-100
+          dark: '#2C262B',
+          light: '#ECCEF5', // bg-gray-100
         }
       },
       borderColor: ({ theme }) => ({
@@ -44,4 +46,3 @@ export default {
   },
   plugins: [],
 }
-
