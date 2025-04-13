@@ -25,7 +25,7 @@ const Navbar = () => {
       theme === 'dark' ? 'bg-bodyColor-dark' : 'bg-bodyColor-light'
     } mx-auto flex justify-between items-center font-titleFont ${
       scrolled ? `border-b-[1px] ${theme === 'dark' ? 'border-b-designColor-dark/30' : 'border-b-designColor-light/30'}` 
-              : `shadow-lg ${theme === 'dark' ? 'shadow-black/20' : 'shadow-gray-300'}`
+              : `shadow-lg ${theme === 'dark' ? 'shadow-black/20' : 'shadow-black/10'}`
     }`}>
       <div className="font-titleFont text-3xl font-bold uppercase tracking-wide cursor-pointer whitespace-nowrap ml-5">
         Monica's Portfolio

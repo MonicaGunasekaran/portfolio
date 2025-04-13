@@ -14,7 +14,7 @@ export default {
       colors: {
         designColor: {
           DEFAULT: '#3b82f6', // default (blue-500)
-          dark: '#facc15', // yellow-400
+          dark: '#AAF4CD', // yellow-400
           dark2: '#ECE896', // lightyello
           light2: '#568BD0', //lightblue
           light: '#3b82f6', // blue-500
@@ -24,7 +24,7 @@ export default {
           light: '#000000',
         },
         bodyColor: {
-          dark: '#2C262B',
+          dark: '#1E1B1F',
           light: '#ECCEF5', // bg-gray-100
         }
       },
