@@ -1,14 +1,15 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
-import Banner from "./Components/Banner/Banner";
-import Skills from "./Components/Skills/Skills";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer";
-import FooterBottom from "./Components/FooterBottom";
-import Navbar from "./Components/Navbar";
-import Projects from "./Components/Projects";
-import Resume from "./Components/Resume";
-import Experience from './Components/Experience';
+import Navbar from './components/navbar';
+import Banner from './components/banner';
+import Skills from './components/skills';
+import Projects from './components/projects';
+import Contact from './components/contact';
+import Resume from './components/resume';
+import Footer from './components/footer';
+import FooterBottom from './components/footerbottom';
+import Exp from './components/exp';
+
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
@@ -20,7 +21,7 @@ const App = () => {
       <div className="max-w-screen-xl mx-auto">
         <Banner />
         <Skills />
-        <Experience />
+        <Exp />
         <Projects />
         <Contact />
       </div>

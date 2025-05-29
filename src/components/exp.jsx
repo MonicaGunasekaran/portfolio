@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/themeContext';
-import Title from "./Title";
+import Title from "/Title";
 
 const experiences = [
   {
@@ -25,7 +25,7 @@ const experiences = [
   }
 ];
 
-const Experience = () => {
+const Exp = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -68,4 +68,4 @@ const Experience = () => {
   );
 }
 
-export default Experience;
+export default Exp;
