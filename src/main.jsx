@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { ThemeProvider } from './context/themeContext.jsx'
 import { useState, useEffect } from 'react'
-// import Pl from './Components/Pl.jsx'
+import Pl from './preLoad.jsx'
 
 const Root = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -19,8 +19,7 @@ const Root = () => {
 
   return (
     <ThemeProvider>
-      {/* {isLoading ? <Pl /> : <App />} */}
-      <App />
+      {isLoading ? <Pl /> : <App />}
     </ThemeProvider>
   )
 }
