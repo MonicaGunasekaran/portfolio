@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { ThemeProvider } from './context/themeContext.jsx'
-import Preloader from './Components/Preloader'
 import { useState, useEffect } from 'react'
+import Pl from './Components/Pl.jsx'
 
 const Root = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -19,7 +19,7 @@ const Root = () => {
 
   return (
     <ThemeProvider>
-      {isLoading ? <Preloader /> : <App />}
+      {isLoading ? <Pl /> : <App />}
     </ThemeProvider>
   )
 }

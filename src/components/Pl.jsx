@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/themeContext';
 
-const Preloader = () => {
+const Pl = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -17,4 +17,4 @@ const Preloader = () => {
   );
 };
 
-export default Preloader;
+export default Pl;
