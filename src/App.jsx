@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
 import Navbar from './components/navbar';
-import Banner from './components/banner';
+import Banner from './components/banner/index';
 import Skills from './components/skills';
 import Projects from './components/projects';
 import Contact from './components/contact';

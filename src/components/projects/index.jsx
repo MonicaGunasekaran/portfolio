@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import ProjectsCard from "./ProjectCard";
-import Title from "./Title";
-import { ThemeContext } from "../context/themeContext";
+import ProjectsCard from "../../Components/ProjectCard";
+import Title from "../Title";
+import { ThemeContext } from "../../context/themeContext";
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);

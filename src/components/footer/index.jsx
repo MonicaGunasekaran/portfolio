@@ -1,6 +1,6 @@
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { useContext } from "react";
-import { ThemeContext } from "../context/themeContext"; // adjust path if needed
+import { ThemeContext } from "../../context/themeContext"; // adjust path if needed
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);

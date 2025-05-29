@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/themeContext';
-import Title from "/Title";
+import Title from "./Title";
 
 const experiences = [
   {

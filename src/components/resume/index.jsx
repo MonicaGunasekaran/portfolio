@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Parallax } from "react-parallax";
-import Title from "./Title";
-import { ThemeContext } from "../context/themeContext";
+import Title from "../Title";
+import { ThemeContext } from "../../context/themeContext";
 
 const Resume = () => {
     const { theme } = useContext(ThemeContext);

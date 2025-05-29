@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from 'react';
-import { ThemeContext } from '../context/themeContext';
-import { navLinksData } from "../Constants/NavData";
+import { ThemeContext } from '../../context/themeContext';
+import { navLinksData } from "../../Constants/NavData.js";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
