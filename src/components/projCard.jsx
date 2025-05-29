@@ -4,50 +4,54 @@ import { BsGithub } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 import { ThemeContext } from "../context/themeContext";
 
-const ProjCard = ({ title, des, src, projLink, gitLink, className, iconClass }) => {
+const ProjCard = ({
+  title,
+  des,
+  src,
+  projLink,
+  gitLink,
+  className,
+  iconClass,
+  tags = [],
+}) => {
   const { theme } = useContext(ThemeContext);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className={`w-full p-6 rounded-xl flex flex-col group ${
-        theme === 'dark' 
-          ? 'bg-bodyColor-light/20 shadow-2xl' 
-          : 'bg-fontColor-dark/40 shadow-2xl'
-      } hover:shadow-2xl transition-all duration-300 ${className}`}
+      className={`w-full p-6 rounded-xl flex flex-col bg-white dark:bg-gray-800 shadow-lg ${className} ${
+        theme === "dark"
+          ? "text-gray-300"
+          : "text-gray-800"
+      }`}
     >
-      <div className="w-full h-[180px] overflow-hidden rounded-lg relative shadow-inner  ">
-        <div className={`absolute inset-0 bg-gradient-to-br ${iconClass} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
+      <div className="relative w-full h-[180px] overflow-hidden rounded-lg shadow-inner">
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${iconClass} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
+        ></div>
         <img
-          className="w-full h-full object-cover rounded-lg group-hover:scale-105 duration-300"
           src={src}
           alt={title}
+          className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
         />
       </div>
 
-      <div className="w-full mt-6 flex flex-col gap-4">
-        <div className="flex items-center justify-between">
-          <h3 className={`text-lg xl:text-xl font-bold ${
-            theme === 'dark' ? 'text-fontColor-dark' : 'text-fontColor-light'
-          }`}>
-            {title}
-          </h3>
+      <div className="flex flex-col mt-6 gap-4">
+        <div className="flex justify-between items-center">
+          <h3 className="text-xl font-semibold">{title}</h3>
           <div className="flex gap-3">
             {gitLink && (
               <a
                 href={gitLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="GitHub Repository"
+                aria-label="GitHub Repository"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:text-designColor dark:hover:text-designColor-dark transition"
               >
-                <span className={`text-lg w-10 h-10 rounded-full inline-flex justify-center items-center hover:text-designColor dark:hover:text-designColor-dark transition-all duration-300 ${
-                  theme === 'dark' 
-                    ? 'bg-bodyColor-dark/80 text-fontColor-dark/80' 
-                    : 'bg-bodyColor-light/80 text-fontColor-light/80'
-                }`}>
-                  <BsGithub />
-                </span>
+                <BsGithub size={20} />
               </a>
             )}
             {projLink && (
@@ -55,27 +59,28 @@ const ProjCard = ({ title, des, src, projLink, gitLink, className, iconClass }) 
                 href={projLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Live Demo"
+                aria-label="Live Demo"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:text-designColor dark:hover:text-designColor-dark transition"
               >
-                <span className={`text-lg w-10 h-10 rounded-full inline-flex justify-center items-center hover:text-designColor dark:hover:text-designColor-dark transition-all duration-300 ${
-                  theme === 'dark' 
-                    ? 'bg-bodyColor-dark/80 text-fontColor-dark/80' 
-                    : 'bg-bodyColor-light/80 text-fontColor-light/80'
-                }`}>
-                  <FaGlobe />
-                </span>
+                <FaGlobe size={18} />
               </a>
             )}
           </div>
         </div>
 
-        <p className={`text-sm xl:text-base tracking-wide leading-relaxed ${
-          theme === 'dark' 
-            ? 'text-fontColor-dark/80 group-hover:text-fontColor-dark' 
-            : 'text-fontColor-light/80 group-hover:text-fontColor-light'
-        } transition-colors duration-300`}>
-          {des}
-        </p>
+        <p className="text-sm leading-relaxed">{des}</p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 pt-2">
+          {tags.map((tag, i) => (
+            <span
+              key={i}
+              className="bg-designColor/20 text-designColor dark:bg-designColor-dark/20 dark:text-designColor-dark text-xs font-semibold px-3 py-1 rounded-full select-none"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
