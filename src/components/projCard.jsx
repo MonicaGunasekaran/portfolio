@@ -4,7 +4,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 import { ThemeContext } from "../context/themeContext";
 
-const ProjectsCard = ({ title, des, src, projLink, gitLink, className, iconClass }) => {
+const ProjCard = ({ title, des, src, projLink, gitLink, className, iconClass }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <motion.div
@@ -81,4 +81,4 @@ const ProjectsCard = ({ title, des, src, projLink, gitLink, className, iconClass
   );
 };
 
-export default ProjectsCard;
+export default ProjCard;

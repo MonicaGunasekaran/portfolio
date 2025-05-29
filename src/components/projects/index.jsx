@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import ProjectsCard from "../../Components/ProjectCard";
 import Title from "../Title";
 import { ThemeContext } from "../../context/themeContext";
+import ProjCard from "../projCard";
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
@@ -20,14 +20,14 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
-        <ProjectsCard
+        <ProjCard
           title="Active Prosthetic Ankle"
           des="An IoT-based prosthetic ankle with real-time adaptability."
           src="/projects/image.png"
           className="hover:border-designColor-light dark:hover:border-designColor-dark border-2 border-transparent transition-all duration-300"
           iconClass="bg-gradient-to-br from-blue-500 to-purple-600 p-2 rounded-lg"
         />
-        <ProjectsCard
+        <ProjCard
           title="BLOG Website with CRUD"
           des="A full-stack blog website using React and Firebase."
           src="/assets/reactLogo.png"
