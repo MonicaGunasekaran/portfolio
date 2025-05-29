@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { ThemeProvider } from './context/themeContext.jsx'
-import Preloader from './Components/Preloader.jsx'
+import Preloader from './Components/Preloader'
 import { useState, useEffect } from 'react'
 
 const Root = () => {
