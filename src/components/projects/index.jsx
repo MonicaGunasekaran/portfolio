@@ -34,28 +34,28 @@ const Projects = () => {
           className="hover:border-designColor-light dark:hover:border-designColor-dark border-2 border-transparent transition-all duration-300"
           iconClass="bg-gradient-to-br from-cyan-400 to-blue-600 p-2 rounded-lg"
         />
-        <ProjectsCard
+        <ProjCard
           title="Travel App"
           des="A travel planning app featuring dynamic itineraries."
           src="/assets/reactLogo.png"
           className="hover:border-designColor-light dark:hover:border-designColor-dark border-2 border-transparent transition-all duration-300"
           iconClass="bg-gradient-to-br from-cyan-400 to-blue-600 p-2 rounded-lg"
         />
-        <ProjectsCard
+        <ProjCard
           title="Registration Form"
           des="User-friendly registration form integrated with MySQL."
           src="/assets/sql.png"
           className="hover:border-designColor-light dark:hover:border-designColor-dark border-2 border-transparent transition-all duration-300"
           iconClass="bg-gradient-to-br from-amber-500 to-orange-600 p-2 rounded-lg"
         />
-        <ProjectsCard
+        <ProjCard
           title="Coffee Shop App Design"
           des="A UI/UX design for a digital coffee ordering system."
           src="/assets/figma.png"
           className="hover:border-designColor-light dark:hover:border-designColor-dark border-2 border-transparent transition-all duration-300"
           iconClass="bg-gradient-to-br from-pink-500 to-purple-600 p-2 rounded-lg"
         />
-        <ProjectsCard
+        <ProjCard
           title="Library Management System"
           des="A Java-based system for managing book transactions."
           src="/assets/java.png"

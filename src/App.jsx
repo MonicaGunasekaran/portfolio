@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { ThemeContext } from './context/themeContext';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/index';
 import Banner from './components/banner/index';
-import Skills from './components/skills';
-import Projects from './components/projects';
-import Contact from './components/contact';
-import Resume from './components/resume';
-import Footer from './components/footer';
-import FooterBottom from './components/footerbottom';
+import Skills from './components/skills/index';
+import Projects from './components/projects/index';
+import Contact from './components/contact/index';
+import Resume from './components/resume/index';
+import Footer from './components/footer/index';
+import FooterBottom from './components/footerbottom/index';
 import Exp from './components/exp';
 
 
