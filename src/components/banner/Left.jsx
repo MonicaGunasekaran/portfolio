@@ -9,7 +9,7 @@ const Left = () => {
     return (
         <div className="w-full lgl:w-1/2 flex flex-col gap-10 px-8 py-16 text-center lg:text-left space-y-4">
             <h1 className="text-4xl font-bold text-designColor-light dark:text-designColor-dark">A Little bit About Me 🌸</h1>
-            <p className="text-2xl font-semibold text-fontColor-light dark:text-fontColor-dark">Hi, I'm Kabileshwaran 👋</p>
+            <p className="text-2xl font-semibold text-fontColor-light dark:text-fontColor-dark">Hi, I'm Monica 👋</p>
             <p className="text-xl text-fontColor-light/80 dark:text-fontColor-dark/80">Final Year CSE Student | Aspiring Software Developer</p>
             
             <Link to="contact" smooth={true} duration={500} offset={-50}>
