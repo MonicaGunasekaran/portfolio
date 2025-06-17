@@ -23,7 +23,7 @@ const Footer = () => {
           <li><strong>Profession:</strong> Student</li>
           <li><strong>Age:</strong> 22</li>
           <li><strong>Date of Birth:</strong> 25/09/2003</li>
-          <li><strong>Marital Status:</strong> Single</li>
+          <li><strong>Marital Status:</strong>Single</li>
         </ul>
       </div>
 
