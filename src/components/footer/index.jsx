@@ -21,8 +21,8 @@ const Footer = () => {
         </h3>
         <ul className="flex flex-col gap-3 font-titleFont font-medium py-4 text-base">
           <li><strong>Profession:</strong> Student</li>
-          <li><strong>Age:</strong> 21</li>
-          <li><strong>Date of Birth:</strong> 01/08/2003</li>
+          <li><strong>Age:</strong> 22</li>
+          <li><strong>Date of Birth:</strong> 25/09/2003</li>
           <li><strong>Marital Status:</strong> Single</li>
         </ul>
       </div>
