@@ -107,9 +107,9 @@ const Skills = () => {
             <div className="w-full max-w-md">
               <div className="relative">
                 {[
-                  { degree: "BE, Computer Science", grade: "8.5 CGPA", year: "2019-2023" },
-                  { degree: "HSC", grade: "90.52%", year: "2018-2019" },
-                  { degree: "SSLC", grade: "90.2%", year: "2016-2017" }
+                  { degree: "BE, Computer Science", grade: "8.5 CGPA", year: "2021-2025" },
+                  { degree: "HSC", grade: "91.98%", year: "2020-2021" },
+                  { degree: "SSLC", grade: "91.9%", year: "2018-2019" }
                 ].map((edu, index) => (
                   <div key={index} className="mb-10 relative">
                     <div className="absolute left-0 h-full w-4 flex flex-col items-center">
