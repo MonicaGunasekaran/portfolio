@@ -42,7 +42,7 @@ const Resume = () => {
                                 <div className="flex gap-4">
                                     <a 
                                         href="/resume.pdf" 
-                                        download="Kabileshwaran_B.pdf"
+                                        download="Monica_resume.pdf"
                                         className="px-6 py-3 bg-designColor dark:bg-designColor-dark text-black rounded-md dark:hover:bg-designColor-dark/80 hover:bg-designColor/80 transition-colors duration-300"
                                     >
                                         Download Resume
