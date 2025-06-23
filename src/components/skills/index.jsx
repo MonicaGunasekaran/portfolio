@@ -2,15 +2,18 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
 
 const skills = [
-  { name: "Java", icon: "/assets/java.png" },
-  { name: "SQL", icon: "/assets/sql.png" },
+  { name: "IoT", icon: "/assets/iot.png" },
+   { name: "UIPath", icon: "/assets/uipath.png" },
   { name: "Figma", icon: "/assets/figma.png" },
   { name: "GitHub", icon: "/assets/github.png" },
   { name: "React", icon: "/assets/reactLogo.png" },
-  { name: "IoT", icon: "/assets/iot.png" },
-  { name: "IoT", icon: "/assets/iot.png" },
-  { name: "IoT", icon: "/assets/iot.png" },
-  { name: "IoT", icon: "/assets/iot.png" },
+  { name: "IoT", icon: "/assets/python.png" },
+  { name: "Mern", icon: "/assets/mern.png" },
+
+ 
+{ name: "Java", icon: "/assets/java.png" },
+    { name: "SQL", icon: "/assets/ssms.png"}
+
 ];
 
 const Skills = () => {
