@@ -1,6 +1,5 @@
 import React, { useContext, useRef, useEffect, useState } from "react";
 import { ThemeContext } from "../../context/themeContext";
-import { Link } from "react-scroll";
 
 const skills = [
   { name: "Java", icon: "/assets/java.png" },
@@ -37,67 +36,72 @@ const Skills = () => {
       }
     };
   }, []);
+
   const bgColor = theme === 'dark' ? 'bg-bodyColor-dark' : 'bg-bodyColor-light';
   const textColor = theme === 'dark' ? 'text-fontColor-dark' : 'text-fontColor-light';
   const designColor = theme === 'dark' ? 'border-designColor-dark' : 'border-designColor-light';
   const dividerColor = theme === 'dark' ? 'bg-gradient-to-b from-transparent via-white to-transparent' : 'bg-gradient-to-b from-transparent via-fontColor-light to-transparent';
 
   return (
-    <section id="skills" className={`${bgColor} py-16 px-6 md:px-8`}>
+    <section id="skills" className={`${bgColor} py-20 px-6 md:px-8`}>
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-16">
           {/* Skills Section */}
           <div className="flex-1 flex flex-col items-center">
             <h2 className={`text-4xl font-bold mb-8 text-center ${textColor}`}>
               Skills
             </h2>
-            <div className="relative w-full max-w-[400px] h-[400px] mx-auto">
-              <div 
-                ref={circleRef}
-                className={`absolute inset-0 rounded-full border-[12px] border-${designColor} 
-                  flex items-center justify-center shadow-lg transition-all duration-1000
-                  ${isVisible ? 'rotate-[360deg]' : ''}`}
-                  style={{
-                    background: `conic-gradient(from 0deg, transparent 0%, ${theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'} 100%)`
-                  }}
-              >
-                <div className="text-center">
-                  <h3 className={`text-2xl font-semibold ${textColor}`}>Tech Stack</h3>
-                </div>
-              </div>
-
-              {skills.map((skill, index) => {
-                const angle = (index * 360) / skills.length;
-                const radius = 180;
-                const x = radius * Math.cos((angle * Math.PI) / 180);
-                const y = radius * Math.sin((angle * Math.PI) / 180);
-
-              return (
+            <div className="w-full flex justify-center items-center">
+              <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px]">
                 <div
-                  key={index}
-                  className={`absolute w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 backdrop-blur-sm
-                    flex items-center justify-center shadow-lg transition-all duration-300
-                    hover:scale-125 hover:shadow-xl border-2 border-white/30`}
+                  ref={circleRef}
+                  className={`absolute inset-0 rounded-full border-[12px] ${designColor}
+                    flex items-center justify-center shadow-lg transition-all duration-1000
+                    ${isVisible ? 'rotate-[360deg]' : ''}`}
                   style={{
-                    left: `calc(50% + ${x}px - 2.5rem)`,
-                    top: `calc(50% + ${y}px - 2.5rem)`,
-                    transform: isVisible ? `rotate(${360}deg)` : 'none',
-                    transition: `transform 1s ${index * 0.1}s ease-out`
+                    background: `conic-gradient(from 0deg, transparent 0%, ${
+                      theme === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'
+                    } 100%)`
                   }}
                 >
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="w-3/4 h-3/4 object-contain"
-                  />
+                  <div className="text-center">
+                    <h3 className={`text-2xl font-semibold ${textColor}`}>Tech Stack</h3>
+                  </div>
                 </div>
-              );
-            })}
+
+                {skills.map((skill, index) => {
+                  const angle = (index * 360) / skills.length;
+                  const radius = 140;
+                  const x = radius * Math.cos((angle * Math.PI) / 180);
+                  const y = radius * Math.sin((angle * Math.PI) / 180);
+
+                  return (
+                    <div
+                      key={index}
+                      className={`absolute w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 backdrop-blur-sm
+                        flex items-center justify-center shadow-lg transition-all duration-300
+                        hover:scale-125 hover:shadow-xl border-2 border-white/30`}
+                      style={{
+                        left: `calc(50% + ${x}px - 2.5rem)`,
+                        top: `calc(50% + ${y}px - 2.5rem)`,
+                        transform: isVisible ? `rotate(360deg)` : 'none',
+                        transition: `transform 1s ${index * 0.1}s ease-out`
+                      }}
+                    >
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        className="w-3/4 h-3/4 object-contain"
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
-          {/* Divider */}
-              <div className={`hidden lg:block w-px h-[400px] self-center ${dividerColor}`}></div>
+          {/* Divider (only for large screens) */}
+          <div className={`hidden lg:block w-px h-[400px] self-center ${dividerColor}`}></div>
 
           {/* Education Section */}
           <div className="flex-1 flex flex-col items-center">
@@ -114,20 +118,15 @@ const Skills = () => {
                   <div key={index} className="mb-10 relative">
                     <div className="absolute left-0 h-full w-4 flex flex-col items-center">
                       <div className="relative h-full w-full flex flex-col items-center justify-center">
-                        {/* Vertical connector line above dot */}
                         {index > 0 && (
                           <div className={`absolute top-0 w-[1.5px] h-1/2 ${designColor.replace('border-', 'bg-')}`}></div>
                         )}
-                        
-                        {/* Centered dot with horizontal connector */}
                         <div className="relative flex items-center justify-center">
                           <div className={`w-4 h-4 rounded-full ${designColor.replace('border-', 'bg-')} flex items-center justify-center z-10`}>
                             <div className="w-2 h-2 rounded-full bg-white"></div>
                           </div>
                           <div className={`absolute h-[2px] w-3 ${designColor.replace('border-', 'bg-')} left-full`}></div>
                         </div>
-
-                        {/* Vertical connector line below dot */}
                         {index < 2 && (
                           <div className={`absolute bottom-0 w-[1.5px] h-1/2 ${designColor.replace('border-', 'bg-')}`}></div>
                         )}
@@ -149,6 +148,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

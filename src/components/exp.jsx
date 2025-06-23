@@ -29,42 +29,46 @@ const Exp = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section
-      id="experience"
-      className={`w-full py-20 border-b-[1px] ${
-        theme === 'dark' 
-          ? 'border-b-bodyColor-dark/50' 
-          : 'border-b-bodyColor-light/50'
-      } scroll-mt-[100px]`}
-    >
-      <Title title="Professional Experience" des="Work History" />
-      
-      <div className="flex flex-col gap-12 mt-10">
-        {experiences.map((exp, index) => (
-          <div key={index} className={`flex flex-col md:flex-row items-center gap-8`}>
-            {/* Company Logo */}
-            <div className="w-32 h-32 bg-fontColor-dark/50 dark:bg-fontColor-dark/90 flex justify-center items-center rounded-3xl shadow-2xl">
-              <img
-                src={exp.logo}
-                alt={`${exp.company} Logo`}
-                className="w-24 h-24 object-contain"
-              />
-            </div>
+  <section
+  id="experience"
+  className={`w-full py-20 border-b-[1px] ${
+    theme === 'dark' 
+      ? 'border-b-bodyColor-dark/50' 
+      : 'border-b-bodyColor-light/50'
+  } scroll-mt-[100px]`}
+>
+  {/* ✅ Center Title on mobile */}
+  <div className="w-full flex flex-col items-center justify-center text-center">
+    <Title title="Professional Experience" des="Work History" />
+  </div>
 
-            {/* Experience Info */}
-            <div className="flex-1 bg-fontColor-dark/20 dark:bg-fontColor-dark/20 p-6 rounded-xl shadow-2xl">
-              <h3 className="text-xl font-bold text-designColor-light dark:text-designColor-dark">{exp.company}</h3>
-              <p className="text-lg text-fontColor-light/70 dark:text-fontColor-dark/70 mb-3">{exp.period}</p>
-              <ul className="list-disc list-inside text-fontColor-light dark:text-fontColor-dark space-y-2">
-                {exp.description.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+  {/* Experience cards */}
+  <div className="flex flex-col gap-12 mt-10">
+    {experiences.map((exp, index) => (
+      <div key={index} className={`flex flex-col md:flex-row items-center gap-8`}>
+        {/* Company Logo */}
+        <div className="w-32 h-32 bg-fontColor-dark/50 dark:bg-fontColor-dark/90 flex justify-center items-center rounded-3xl shadow-2xl">
+          <img
+            src={exp.logo}
+            alt={`${exp.company} Logo`}
+            className="w-24 h-24 object-contain"
+          />
+        </div>
+
+        {/* Experience Info */}
+        <div className="flex-1 bg-fontColor-dark/20 dark:bg-fontColor-dark/20 p-6 rounded-xl shadow-2xl">
+          <h3 className="text-xl font-bold text-designColor-light dark:text-designColor-dark">{exp.company}</h3>
+          <p className="text-lg text-fontColor-light/70 dark:text-fontColor-dark/70 mb-3">{exp.period}</p>
+          <ul className="list-disc list-inside text-fontColor-light dark:text-fontColor-dark space-y-2">
+            {exp.description.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 }
 
