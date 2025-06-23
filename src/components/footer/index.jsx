@@ -20,8 +20,8 @@ const Footer = () => {
           Personal Info
         </h3>
         <ul className="flex flex-col gap-3 font-titleFont font-medium py-4 text-base">
-          <li><strong>Profession:</strong> Student</li>
-          <li><strong>Age:</strong> 22</li>
+          <li><strong>Profession:</strong>CSE Graduate</li>
+          <li><strong>Age:</strong> 21</li>
           <li><strong>Date of Birth:</strong> 25/09/2003</li>
           <li><strong>Marital Status:</strong>Single</li>
         </ul>
@@ -33,19 +33,18 @@ const Footer = () => {
           Hobbies
         </h3>
         <ul className="flex flex-col gap-3 font-titleFont font-medium py-4 text-base">
-          <li>Playing Chess</li>
-          <li>Watching space-related videos & theories</li>
-          <li>Pencil Sketching</li>
+          <li>Playing Rubix cube</li>
+          <li>Cooking</li>
+          <li>Listening Music</li>
         </ul>
       </div>
       <div className="w-full h-full col-span-3">
         <h3 className="text-xl uppercase text-designColor dark:text-designColor-dark tracking-wider">
-          Hobbies
+          Achievements
         </h3>
         <ul className="flex flex-col gap-3 font-titleFont font-medium py-4 text-base">
-          <li>Playing Chess</li>
-          <li>Watching space-related videos & theories</li>
-          <li>Pencil Sketching</li>
+          <li>Thirukkural selvi award from <br/>former CM J.Jayalalithaa</li>
+          <li>Academic Topper</li>
         </ul>
       </div>
     </div>
