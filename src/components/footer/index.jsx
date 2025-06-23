@@ -9,13 +9,13 @@ const Footer = () => {
 
   return (
     <div
-      className={`w-full py-6 px-6 h-auto grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-9 gap-8 transition-all duration-300 ${
+      className={`w-full py-6 px-6 h-auto grid  sm:place-items-center sm:text-center  md:grid-cols-2 lgl:grid-cols-9 gap-8 transition-all duration-300 ${
         isLight ? "bg-bodyColor-light text-fontColor-light" : "bg-bodyColor-dark text-fontColor-dark"
       }`}
     >
       
       {/* Personal Info */}
-      <div className="w-full h-full col-span-3">
+      <div className="w-full h-full justify-center items-center align-middle col-span-3">
         <h3 className="text-xl uppercase text-designColor dark:text-designColor-dark tracking-wider">
           Personal Info
         </h3>
