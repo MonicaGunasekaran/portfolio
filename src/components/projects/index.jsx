@@ -16,7 +16,7 @@ const projectsData = [
   {
     title: "BLOG Website with CRUD",
     des: "A full-stack blog website using MERN Stack.",
-    src: "/assets/reactLogo.png",
+    src: "/assets/mern.png",
     iconClass: "from-cyan-400 to-blue-600",
     projLink: "#",
     gitLink: "#",
