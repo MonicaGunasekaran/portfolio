@@ -32,13 +32,13 @@ const projectsData = [
     tags: ["React", "Mobile", "UX"]
   },
   {
-    title: "Registration Form",
-    des: "User-friendly registration form integrated with MySQL.",
-    src: "/assets/sql.png",
+    title: "React Hooks mini app",
+    des: "A beginner friendly project for better understanding of Use state and Use Effect hooks.",
+    src: "/assets/reactLogo.png",
     iconClass: "from-amber-500 to-orange-600",
     projLink: "#",
     gitLink: "#",
-    tags: ["MySQL", "Backend", "Forms"]
+    tags: ["React", "Hooks", "Forms"]
   },
   {
     title: "Coffee Shop App Design",
