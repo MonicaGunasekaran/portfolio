@@ -15,12 +15,12 @@ const projectsData = [
   },
   {
     title: "BLOG Website with CRUD",
-    des: "A full-stack blog website using MERN Stack.",
+    des: "A full-stack blog website using MERN Stack. This helps understand CRUD Operations with MERN.",
     src: "/assets/mern.png",
     iconClass: "from-cyan-400 to-blue-600",
     projLink: "#",
     gitLink: "#",
-    tags: ["React", "Firebase", "CRUD"]
+    tags: ["React", "MERN", "CRUD"]
   },
   {
     title: "Travel App",
@@ -42,7 +42,7 @@ const projectsData = [
   },
   {
     title: "Coffee Shop App Design",
-    des: "A UI/UX design for a digital coffee ordering system.",
+    des: "A UI/UX design for a Coffee shop. The most intuitive design by analysing all the design aesthetics of a Coffee shop.",
     src: "/assets/figma.png",
     iconClass: "from-pink-500 to-purple-600",
     projLink: "https://drive.google.com/file/d/1_4jI3xqn_jHEn274BzygDjofPtjlXmsd/view?usp=sharing",
