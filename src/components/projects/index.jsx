@@ -45,16 +45,16 @@ const projectsData = [
     des: "A UI/UX design for a digital coffee ordering system.",
     src: "/assets/figma.png",
     iconClass: "from-pink-500 to-purple-600",
-    projLink: "#",
+    projLink: "https://drive.google.com/file/d/1_4jI3xqn_jHEn274BzygDjofPtjlXmsd/view?usp=sharing",
     gitLink: "#",
     tags: ["Figma", "UI/UX", "Design"]
   },
   {
     title: "Cycle Store app design",
-    des: "A Java-based system for managing book transactions.",
+    des: "Recreated a Figma design for better understanding of react-tailwind.",
     src: "/assets/reactLogo.png",
     iconClass: "from-red-500 to-amber-600",
-    projLink: "https://reacthooksminiproject.netlify.app/",
+    projLink: "https://react-tailwind-cycle.netlify.app/",
     gitLink: "#",
     tags: ["React", "Desktop", "Management"]
   }
