@@ -9,13 +9,13 @@ const projectsData = [
     des: "An IoT-based prosthetic ankle with real-time adaptability.",
     src: "/projects/image.png",
     iconClass: "from-blue-500 to-purple-600",
-    projLink: "#",
+    projLink: "https://www.linkedin.com/pulse/revolutionizing-mobility-lower-limb-amputees-adaptive-gnanaprakash-g-11ape/",
     gitLink: "#",
     tags: ["IoT", "Hardware", "Embedded"]
   },
   {
     title: "BLOG Website with CRUD",
-    des: "A full-stack blog website using React and Firebase.",
+    des: "A full-stack blog website using MERN Stack.",
     src: "/assets/reactLogo.png",
     iconClass: "from-cyan-400 to-blue-600",
     projLink: "#",
@@ -27,7 +27,7 @@ const projectsData = [
     des: "A travel planning app featuring dynamic itineraries.",
     src: "/assets/reactLogo.png",
     iconClass: "from-cyan-400 to-blue-600",
-    projLink: "#",
+    projLink: "https://firstproj-on-travel-app.netlify.app/",
     gitLink: "#",
     tags: ["React", "Mobile", "UX"]
   },
@@ -50,13 +50,13 @@ const projectsData = [
     tags: ["Figma", "UI/UX", "Design"]
   },
   {
-    title: "Library Management System",
+    title: "Cycle Store app design",
     des: "A Java-based system for managing book transactions.",
-    src: "/assets/java.png",
+    src: "/assets/reactLogo.png",
     iconClass: "from-red-500 to-amber-600",
-    projLink: "#",
+    projLink: "https://reacthooksminiproject.netlify.app/",
     gitLink: "#",
-    tags: ["Java", "Desktop", "Management"]
+    tags: ["React", "Desktop", "Management"]
   }
 ];
 

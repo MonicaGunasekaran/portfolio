@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/themeContext';
 
-const RightBanner = () => {
+const RightBanner = () => {                         
     const { theme } = useContext(ThemeContext);
 
     return (
