@@ -18,7 +18,7 @@ const projectsData = [
     des: "A full-stack blog website using MERN Stack. This helps understand CRUD Operations with MERN.",
     src: "/assets/mern.png",
     iconClass: "from-cyan-400 to-blue-600",
-    projLink: "#",
+    projLink: "https://68a0c72a3d532e24f67b31c4--blogapp-frontend-reactjs.netlify.app/",
     gitLink: "#",
     tags: ["React", "MERN", "CRUD"]
   },
@@ -36,7 +36,7 @@ const projectsData = [
     des: "A beginner friendly project for better understanding of Use state and Use Effect hooks.",
     src: "/assets/reactLogo.png",
     iconClass: "from-amber-500 to-orange-600",
-    projLink: "#",
+    projLink: "https://reacthooksminiproject.netlify.app/",
     gitLink: "#",
     tags: ["React", "Hooks", "Forms"]
   },
